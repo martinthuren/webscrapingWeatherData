@@ -8,7 +8,7 @@ import java.util.List;
 
 public class WebScrape {
     public static void main(String[] args) {
-        String url = "https://www.vejreti.com/europe/denmark?page=14";
+        String url = "https://www.vejreti.com/europe/denmark?page=today";
 
         try {
             // Connect to the website and get the HTML document
@@ -20,22 +20,37 @@ public class WebScrape {
             List<WeatherDTO> weatherDataList = new ArrayList<>();
 
             // Select the elements by class name (without the dot)
-            Elements dayAndDate = document.getElementsByClass("weather_day_date");
-            Elements date = document.getElementsByClass("weather_date_month");
-            Elements tempOfDay = document.getElementsByClass("day-max-temp");
-            Elements wind = document.getElementsByClass("data-wind");
-            Elements humidity = document.getElementsByClass("wind_unit");
+
+            Elements dayAndDateElements = document.getElementsByClass("day-value");
+            Elements weatherElements = document.getElementsByClass("day-value");
+            Elements chanceOfRainElements = document.getElementsByClass("day-value");
+            Elements rainfallElements = document.getElementsByClass("day-value");
+            Elements humidityElements = document.getElementsByClass("day-value");
+            Elements windSpeedElements = document.getElementsByClass("day-value");
+            Elements windPushElements = document.getElementsByClass("day-value");
+            Elements windDirectionElements = document.getElementsByClass("day-value");
+            Elements cloudCoverElements = document.getElementsByClass("day-value");
+            Elements uvIndexElements = document.getElementsByClass("day-value");
+            Elements visibilityElements = document.getElementsByClass("day-value");
 
 
-            // Iterate over the elements
-            for (int i = 0; i < dayAndDate.size(); i++) {
-                String day = dayAndDate.get(i).text();
-                String temp = tempOfDay.get(i).text();
-                String specificdate = date.get(i).text();
-                String dailyhumidity = humidity.get(i).text();
-                WeatherDTO weatherDTO = new WeatherDTO(day, temp, specificdate, dailyhumidity);
+            for (int i = 0; i < dayAndDateElements.size(); i++) {
+                String dayAndDate = dayAndDateElements.get(i).text();
+                String weather = weatherElements.get(i).text();
+                String chanceOfRain = chanceOfRainElements.get(i).text();
+                String rainfall = rainfallElements.get(i).text();
+                String humidity = humidityElements.get(i).text();
+                String windSpeed = windSpeedElements.get(i).text();
+                String windPush = windPushElements.get(i).text();
+                String windDirection = windDirectionElements.get(i).text();
+                String cloudCover = cloudCoverElements.get(i).text();
+                String uvIndex = uvIndexElements.get(i).text();
+                String visibility = visibilityElements.get(i).text();
+
+                WeatherDTO weatherDTO = new WeatherDTO(dayAndDate, weather, chanceOfRain, rainfall, humidity, windSpeed, windPush, windDirection, cloudCover, uvIndex, visibility);
                 weatherDataList.add(weatherDTO);
             }
+
 
             // Print the weather data
             for (WeatherDTO weatherDTO : weatherDataList) {
