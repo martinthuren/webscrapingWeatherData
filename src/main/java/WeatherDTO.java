@@ -1,28 +1,30 @@
 public class WeatherDTO {
-    private String time;
-    private String temperature;
-    private String humidity;
-    private String weatherCondition;
     private String day;
+    private String tempOfDay;
+    private String date;
+    private String windDTO;
 
-    public WeatherDTO(String time, String temperature, String humidity, String weatherCondition) {
-        this.time = time;
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.weatherCondition = weatherCondition;
-    }
 
-    public WeatherDTO(String day) {
+    public WeatherDTO(String day, String tempOfDay, String date, String windDTO) {
         this.day = day;
+        this.tempOfDay = tempOfDay;
+        this.date = date;
+        this.windDTO = windDTO;
     }
 
     // Getters and setters for the new attributes
+
 
     @Override
     public String toString() {
         return "WeatherDTO{" +
                 "day='" + day + '\'' +
+                ", tempOfDay='" + tempOfDay + '\'' +
+                ", date='" + date + '\'' +
+                ", windDTO='" + windDTO + '\'' +
                 '}';
     }
 }
+
+
 
