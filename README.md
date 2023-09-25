@@ -1,4 +1,4 @@
-# webscrapingWeatherData
+# Webscraping weather data
 
 ## Opgavebeskrivelse
 This project is meant to be a group exercise and the scope is 4 working days. The requirements are as follows:
@@ -27,8 +27,12 @@ Extract relevant weather data such as temperature, humidity, and conditions and 
 Day 2: Enrichment, API Reading, and Unit Testing
 
 Implement logic to enrich the scraped weather data using a weather API (OpenWeatherMap API) and add additional - - data/info regarding geographical destinations
-https://dawadocs.dataforsyningen.dk/dok/api/sted or
+
+https://dawadocs.dataforsyningen.dk/dok/api/sted
+
+or
 https://vejr.eu/pages/api-documentation
+
 Create a Java class (e.g., WeatherApiReader) to interact with the API and fetch additional weather information.
 Write unit tests for scraping, enrichment, and API reading logic using JUnit.
 
