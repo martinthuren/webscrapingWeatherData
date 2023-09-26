@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd474c7-80a8-4d30-a583-049756b66749" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webscrapingWeatherData.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WeatherAPIReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +71,7 @@
       <workItem from="1695635163943" duration="286000" />
       <workItem from="1695635478745" duration="3615000" />
       <workItem from="1695641087557" duration="4683000" />
+      <workItem from="1695723999536" duration="568000" />
     </task>
     <servers />
   </component>
