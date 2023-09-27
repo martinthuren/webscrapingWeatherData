@@ -18,7 +18,7 @@ public class HibernateConfig {
 
             Properties props = new Properties();
 
-            props.put("hibernate.connection.url", "jdbc:postgresql://localhost:5432/weatherscraper?currentSchema=public");
+            props.put("hibernate.connection.url", "jdbc:postgresql://localhost:5432/weather_db");
             props.put("hibernate.connection.username", "postgres");
             props.put("hibernate.connection.password", "postgres");
             props.put("hibernate.show_sql", "true"); // show sql in console
@@ -54,6 +54,9 @@ public class HibernateConfig {
     private static void getAnnotationConfiguration(Configuration configuration) {
         // add annotated classes
         configuration.addAnnotatedClass(WebScrape.class);
+        configuration.addAnnotatedClass(WeatherEntity.class);
+        configuration.addAnnotatedClass(WeatherDTO.class);
+        configuration.addAnnotatedClass(WeatherDAO.class);
     }
 
     public static EntityManagerFactory getEntityManagerFactoryConfig() {
