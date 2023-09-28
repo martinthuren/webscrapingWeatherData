@@ -3,6 +3,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Webscrapper {
 
     public static void main(String [] args){
@@ -21,19 +24,39 @@ public class Webscrapper {
 //            System.out.println(row.text());
 
             String secondFocusPoint = ".weather_table.day_table";
-//
-//
             Element table = doc.select(secondFocusPoint).first();
             Elements rows = table.select("tr");
+
+            List<WeatherDTO> weatherObjects = new ArrayList<>();
+
             for (Element row : rows) {
                 Elements columns = row.select("td"); // Select all columns in each row
-                if (!columns.isEmpty()) {
-                    Element column = columns.get(2); // Get the first column (change the index to select a different column)
-                    System.out.println(column.text()); // Print the text content of the column
+                if (columns.size() >= 13) { // Ensure there are enough columns for weather data
+                    WeatherDTO weatherDTO = new WeatherDTO();
+                    weatherDTO.setTime(columns.get(0).text());
+                    weatherDTO.setTemperature(columns.get(1).text());
+                    weatherDTO.setWeatherCondition(columns.get(2).text());
+                    weatherDTO.setPrecipitationChance(columns.get(3).text());
+                    weatherDTO.setPrecipitationAmount(columns.get(4).text());
+                    weatherDTO.setHumidity(columns.get(5).text());
+                    weatherDTO.setWindSpeed(columns.get(6).text());
+                    weatherDTO.setWindGust(columns.get(7).text());
+                    weatherDTO.setWindDirectionDegrees(columns.get(8).text());
+                    weatherDTO.setWindDirection(columns.get(9).text());
+                    weatherDTO.setCloudCoverage(columns.get(10).text());
+                    weatherDTO.setUvIndex(columns.get(11).text());
+                    weatherDTO.setVisibility(columns.get(12).text());
+                    weatherObjects.add(weatherDTO);
+
+
                 }
+
+
+                
+
+
             }
-//
-//
+
 
 
 //            //Det område, vi ønsker data fra
@@ -47,6 +70,16 @@ public class Webscrapper {
 //            });
 
 
+        //            //Gets one column
+//            String secondFocusPoint = ".weather_table.day_table";
+//            Element table = doc.select(secondFocusPoint).first();
+//            Elements rows = table.select("tr");
+//            for (Element row : rows) {
+//                Elements columns = row.select("td"); // Select all columns in each row
+//                if (!columns.isEmpty()) {
+//                    Element column = columns.get(0); // Get the first column (change the index to select a different column)
+//                    System.out.println(column.text()); // Print the text content of the column
+//                }
 
 
 //            for(Element allRows : rows){

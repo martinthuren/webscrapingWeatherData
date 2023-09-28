@@ -53,7 +53,6 @@ public class HibernateConfig {
 
     private static void getAnnotationConfiguration(Configuration configuration) {
         // add annotated classes
-        configuration.addAnnotatedClass(WebScrape.class);
         configuration.addAnnotatedClass(WeatherEntity.class);
         configuration.addAnnotatedClass(WeatherDTO.class);
         configuration.addAnnotatedClass(WeatherDAO.class);

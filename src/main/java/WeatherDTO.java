@@ -1,30 +1,48 @@
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class WeatherDTO {
-    private String day;
-    private String tempOfDay;
-    private String date;
-    private String windDTO;
 
+    private String time;
+    private String temperature;
+    private String weatherCondition;
+    private String precipitationChance;
+    private String precipitationAmount;
+    private String humidity;
+    private String windSpeed;
+    private String windGust;
+    private String windDirectionDegrees;
+    private String windDirection;
+    private String cloudCoverage;
+    private String uvIndex;
+    private String visibility;
 
-    public WeatherDTO(String day, String tempOfDay, String date, String windDTO) {
-        this.day = day;
-        this.tempOfDay = tempOfDay;
-        this.date = date;
-        this.windDTO = windDTO;
+    public WeatherDTO(String time, String temperature, String weatherCondition, String precipitationChance, String precipitationAmount, String humidity, String windSpeed, String windGust, String windDirectionDegrees, String windDirection, String cloudCoverage, String uvIndex, String visibility) {
+        this.time = time;
+        this.temperature = temperature;
+        this.weatherCondition = weatherCondition;
+        this.precipitationChance = precipitationChance;
+        this.precipitationAmount = precipitationAmount;
+        this.humidity = humidity;
+        this.windSpeed = windSpeed;
+        this.windGust = windGust;
+        this.windDirectionDegrees = windDirectionDegrees;
+        this.windDirection = windDirection;
+        this.cloudCoverage = cloudCoverage;
+        this.uvIndex = uvIndex;
+        this.visibility = visibility;
     }
 
-    // Getters and setters for the new attributes
 
 
-    @Override
-    public String toString() {
-        return "WeatherDTO{" +
-                "day='" + day + '\'' +
-                ", tempOfDay='" + tempOfDay + '\'' +
-                ", date='" + date + '\'' +
-                ", windDTO='" + windDTO + '\'' +
-                '}';
-    }
+
+    // Constructors, getters, and setters
+
+    // You can generate constructors, getters, and setters for the above fields using your IDE.
 }
-
-
-
