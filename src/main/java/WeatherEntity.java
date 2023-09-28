@@ -1,86 +1,56 @@
 import jakarta.persistence.*;
+import lombok.*;
+
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "weather_data")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Getter
+@Setter
 public class WeatherEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "day")
-    private String day;
+    private String time;
+    private String temperature;
+    private String weatherCondition;
+    private String precipitationChance;
+    private String precipitationAmount;
+    private String humidity;
+    private String windSpeed;
+    private String windGust;
+    private String windDirectionDegrees;
+    private String windDirection;
+    private String cloudCoverage;
+    private String uvIndex;
+    private String visibility;
 
-    @Column(name = "temperature_of_day")
-    private String tempOfDay;
 
-    @Column(name = "date")
-    private String date;
 
-    @Column(name = "wind_info")
-    private String windDTO;
 
-    public WeatherEntity(String day, String tempOfDay, String date, String windDTO) {
-        this.day = day;
-        this.tempOfDay = tempOfDay;
-        this.date = date;
-        this.windDTO = windDTO;
+    public WeatherEntity(String time, String temperature, String weatherCondition, String precipitationChance, String precipitationAmount, String humidity, String windSpeed, String windGust, String windDirectionDegrees, String windDirection, String cloudCoverage, String uvIndex, String visibility) {
+        this.time = time;
+        this.temperature = temperature;
+        this.weatherCondition = weatherCondition;
+        this.precipitationChance = precipitationChance;
+        this.precipitationAmount = precipitationAmount;
+        this.humidity = humidity;
+        this.windSpeed = windSpeed;
+        this.windGust = windGust;
+        this.windDirectionDegrees = windDirectionDegrees;
+        this.windDirection = windDirection;
+        this.cloudCoverage = cloudCoverage;
+        this.uvIndex = uvIndex;
+        this.visibility = visibility;
     }
 
-    public WeatherEntity() {
-        // Default constructor required by JPA
-    }
 
-    // Getters and setters
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public String getDay() {
-        return day;
-    }
-
-    public void setDay(String day) {
-        this.day = day;
-    }
-
-    public String getTempOfDay() {
-        return tempOfDay;
-    }
-
-    public void setTempOfDay(String tempOfDay) {
-        this.tempOfDay = tempOfDay;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getWindDTO() {
-        return windDTO;
-    }
-
-    public void setWindDTO(String windDTO) {
-        this.windDTO = windDTO;
-    }
-
-    @Override
-    public String toString() {
-        return "WeatherEntity{" +
-                "id=" + id +
-                ", day='" + day + '\'' +
-                ", tempOfDay='" + tempOfDay + '\'' +
-                ", date='" + date + '\'' +
-                ", windDTO='" + windDTO + '\'' +
-                '}';
-    }
 }

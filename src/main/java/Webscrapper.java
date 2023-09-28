@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Webscrapper {
 
-    public static void main(String [] args){
+    public static ArrayList<WeatherEntity> getDTOData() {
 
         String url = "https://www.vejreti.com/europe/denmark?page=today";
         String url2 = "https://www.imdb.com/chart/top/?ref_=nv_mv_250";
@@ -18,85 +18,79 @@ public class Webscrapper {
         try{
             doc = Jsoup.connect(url).get();
 
-//            //Gets first row
-//            String focusPoint = "#line1";
-//            Element row = doc.select(focusPoint).first();
-//            System.out.println(row.text());
 
             String secondFocusPoint = ".weather_table.day_table";
             Element table = doc.select(secondFocusPoint).first();
             Elements rows = table.select("tr");
 
-            List<WeatherDTO> weatherObjects = new ArrayList<>();
 
-            for (Element row : rows) {
-                Elements columns = row.select("td"); // Select all columns in each row
-                if (columns.size() >= 13) { // Ensure there are enough columns for weather data
-                    WeatherDTO weatherDTO = new WeatherDTO();
-                    weatherDTO.setTime(columns.get(0).text());
-                    weatherDTO.setTemperature(columns.get(1).text());
-                    weatherDTO.setWeatherCondition(columns.get(2).text());
-                    weatherDTO.setPrecipitationChance(columns.get(3).text());
-                    weatherDTO.setPrecipitationAmount(columns.get(4).text());
-                    weatherDTO.setHumidity(columns.get(5).text());
-                    weatherDTO.setWindSpeed(columns.get(6).text());
-                    weatherDTO.setWindGust(columns.get(7).text());
-                    weatherDTO.setWindDirectionDegrees(columns.get(8).text());
-                    weatherDTO.setWindDirection(columns.get(9).text());
-                    weatherDTO.setCloudCoverage(columns.get(10).text());
-                    weatherDTO.setUvIndex(columns.get(11).text());
-                    weatherDTO.setVisibility(columns.get(12).text());
-                    weatherObjects.add(weatherDTO);
+            ArrayList<WeatherEntity> weatherObjects = new ArrayList<>();
 
 
+
+            for (int iterator = 0; iterator < 8; iterator++) {
+
+                // Select all columns in each row// Ensure there are enough columns for weather data
+                    // Declare variables to hold extracted data
+
+                    // get first index of row
+                    String time = Webscrapper.bruh(0,iterator,rows);
+
+
+                String temperature = Webscrapper.bruh(1,iterator,rows);
+
+
+                String weatherCondition = Webscrapper.bruh(2,iterator,rows);
+
+                String precipitationChance = Webscrapper.bruh(3,iterator,rows);
+
+                String precipitationAmount = Webscrapper.bruh(4,iterator,rows);
+
+
+                String humidity = Webscrapper.bruh(5,iterator,rows);
+                String windSpeed = Webscrapper.bruh(6,iterator,rows);
+                String windGust = Webscrapper.bruh(7,iterator,rows);
+                String windDirectionDegrees = Webscrapper.bruh(8,iterator,rows);
+                String windDirection = Webscrapper.bruh(9,iterator,rows);
+                String cloudCoverage = Webscrapper.bruh(10,iterator,rows);
+                String uvIndex = Webscrapper.bruh(11,iterator,rows);
+                String visibility = Webscrapper.bruh(12,iterator,rows);
+
+
+
+                WeatherEntity weatherEntity = WeatherEntity.builder()
+                        .time(time)
+                        .temperature(temperature)
+                        .weatherCondition(weatherCondition)
+                        .precipitationChance(precipitationChance)
+                        .precipitationAmount(precipitationAmount)
+                        .humidity(humidity)
+                        .windSpeed(windSpeed)
+                        .windGust(windGust)
+                        .windDirectionDegrees(windDirectionDegrees)
+                        .windDirection(windDirection)
+                        .cloudCoverage(cloudCoverage)
+                        .uvIndex(uvIndex)
+                        .visibility(visibility).build();
+                weatherObjects.add(weatherEntity);
                 }
 
-
-                
-
-
-            }
-
-
-
-//            //Det område, vi ønsker data fra
-//            String cssSelect = ".weather_table.day_table";
-//            //Det er den liste vi ønsker at få frem / værdier vi ønsker at få frem
-//            Element table = doc.select(cssSelect).first();
-//
-//            //Søger vi specifikt efter årtal
-//            table.select(".sc-e3e7b191-0.iKUUVe.sc-4dcdad14-2.bYaHFC.cli-ratings-container").forEach(info -> {
-//                System.out.println(info.select(".ipc-rating-star.ipc-rating-star--base.ipc-rating-star--imdb.ratingGroup--imdb-rating").stream().skip(0).toList().get(0).text());
-//            });
-
-
-        //            //Gets one column
-//            String secondFocusPoint = ".weather_table.day_table";
-//            Element table = doc.select(secondFocusPoint).first();
-//            Elements rows = table.select("tr");
-//            for (Element row : rows) {
-//                Elements columns = row.select("td"); // Select all columns in each row
-//                if (!columns.isEmpty()) {
-//                    Element column = columns.get(0); // Get the first column (change the index to select a different column)
-//                    System.out.println(column.text()); // Print the text content of the column
-//                }
-
-
-//            for(Element allRows : rows){
-//                System.out.println(allRows.text());
-//            }
-
-            //Gets entire table info:
-            //String focusPoint = ".weather_table.day_table";
-            //Element table = doc.select(focusPoint).first();
-            //System.out.println(table.text());
-
-
-        }catch (Exception e){
+return weatherObjects;
+        }catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
+    }
 
-
+    private static String bruh(int index, int iterator, Elements rows) {
+        //index chooses which vertical row to use eg. index(0) = time 00:00, 03:00 | index(1) = temperature
+        //Iterator
+        //rows is just simply the ElementsLIST  we're working with
+        String bruh = rows.get(index).select("td").stream()
+                .limit(iterator+1)
+                .toList()
+                .get(iterator).text();
+        return bruh;
     }
 
 

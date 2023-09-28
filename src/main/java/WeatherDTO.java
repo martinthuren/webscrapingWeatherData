@@ -1,12 +1,9 @@
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString
+@Builder
 public class WeatherDTO {
 
     private String time;
@@ -39,10 +36,27 @@ public class WeatherDTO {
         this.visibility = visibility;
     }
 
+    @Override
+    public String toString() {
+        return "WeatherDTO{" +
+                "time='" + time + '\'' +
+                ", temperature='" + temperature + '\'' +
+                ", weatherCondition='" + weatherCondition + '\'' +
+                ", precipitationChance='" + precipitationChance + '\'' +
+                ", precipitationAmount='" + precipitationAmount + '\'' +
+                ", humidity='" + humidity + '\'' +
+                ", windSpeed='" + windSpeed + '\'' +
+                ", windGust='" + windGust + '\'' +
+                ", windDirectionDegrees='" + windDirectionDegrees + '\'' +
+                ", windDirection='" + windDirection + '\'' +
+                ", cloudCoverage='" + cloudCoverage + '\'' +
+                ", uvIndex='" + uvIndex + '\'' +
+                ", visibility='" + visibility + '\'' +
+                '}';
+    }
 
 
-
-    // Constructors, getters, and setters
+// Constructors, getters, and setters
 
     // You can generate constructors, getters, and setters for the above fields using your IDE.
 }

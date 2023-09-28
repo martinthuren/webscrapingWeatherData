@@ -5,22 +5,19 @@ import java.util.List;
 
 public class WeatherDAO {
 
-    private EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
+    static public EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
 
-        public WeatherEntity save(WeatherEntity weatherEntity) {
+        public static WeatherEntity save(WeatherEntity weatherEntity) {
             EntityManager em = emf.createEntityManager();
-            EntityTransaction transaction = em.getTransaction();
 
-            transaction.begin();
+            em.getTransaction().begin();
             em.persist(weatherEntity);
-            transaction.commit();
-
+            em.getTransaction().commit();
             em.close();
-
             return weatherEntity;
         }
 
-        public WeatherEntity delete(Long id) {
+        public static void delete(Long id) {
             EntityManager em = emf.createEntityManager();
             EntityTransaction transaction = em.getTransaction();
 
@@ -35,30 +32,27 @@ public class WeatherDAO {
             transaction.commit();
 
             em.close();
-
-            return weatherEntity;
         }
 
-        public WeatherEntity findWeatherById(Long id) {
+        public static WeatherEntity findWeatherById(Long id) {
             EntityManager em = emf.createEntityManager();
-            EntityTransaction transaction = em.getTransaction();
 
-            transaction.begin();
+
+            em.getTransaction().begin();
 
             WeatherEntity foundWeatherEntity = em.find(WeatherEntity.class, id);
 
             if (foundWeatherEntity == null) {
                 System.out.println("Weather object with ID " + id + " not found.");
             }
-
-            transaction.commit();
+            em.getTransaction().commit();
 
             em.close();
 
             return foundWeatherEntity;
         }
 
-        public void getAllWeatherData() {
+        public static void getAllWeatherData() {
             EntityManager em = emf.createEntityManager();
             EntityTransaction transaction = em.getTransaction();
 
@@ -73,18 +67,17 @@ public class WeatherDAO {
             em.close();
         }
 
-        public WeatherEntity update(WeatherEntity weatherEntity) {
+        public static WeatherEntity update(WeatherEntity weatherEntity) {
             EntityManager em = emf.createEntityManager();
-            EntityTransaction transaction = em.getTransaction();
 
-            transaction.begin();
+
+            em.getTransaction().begin();
 
             WeatherEntity updatedWeatherEntity = em.merge(weatherEntity);
 
-            transaction.commit();
+            em.getTransaction().commit();
 
             em.close();
-
             return updatedWeatherEntity;
         }
     }
