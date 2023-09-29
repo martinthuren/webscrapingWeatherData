@@ -61,3 +61,12 @@ Documentation
 Write documentation including EER Diagram, links and names of the used api's and pages that are used for web scraping
 Consider edge cases, error handling, and potential improvements.
 Prepare a presentation to demonstrate your work for the review on friday
+
+## EER Diagram
+![table.png](table.png)
+
+### Consider edge cases, error handling, and potential improvements.
+- Vi har ikke lavet nogen error handling eller unit testing, da vi ikke har haft tid til det.
+
+- Potential improvements: Vi kunne have implementeret et rest api i vores projekt, men da vi var under tidspres prioriterede vi at få lavet det som vi skulle.
+

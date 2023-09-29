@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd474c7-80a8-4d30-a583-049756b66749" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/25f94770-4644-4c2a-97b0-78f2166a7b27.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Webscrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Webscrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/table.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <list id="3ce2d1cc-8ec3-4c4e-88d1-e9eb29869a49" name="Changes by yusef" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +65,12 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,7 +85,7 @@
       <workItem from="1695635478745" duration="3615000" />
       <workItem from="1695641087557" duration="4683000" />
       <workItem from="1695799665614" duration="1110000" />
-      <workItem from="1695973349740" duration="366000" />
+      <workItem from="1695973349740" duration="2001000" />
     </task>
     <servers />
   </component>
