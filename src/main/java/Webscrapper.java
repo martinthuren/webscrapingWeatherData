@@ -16,21 +16,23 @@ public class Webscrapper {
         Document doc = null;
 
         try{
+            // Connect to the weather URL and retrieve the document
             doc = Jsoup.connect(url).get();
 
-
+            // CSS selector to focus on the weather table
             String secondFocusPoint = ".weather_table.day_table";
             Element table = doc.select(secondFocusPoint).first();
             Elements rows = table.select("tr");
 
-
+            // List to store weather data
             ArrayList<WeatherEntity> weatherObjects = new ArrayList<>();
 
 
-
+            // Iterate through each row in the weather table (up to 8 rows)
             for (int iterator = 0; iterator < 8; iterator++) {
 
-                // Select all columns in each row// Ensure there are enough columns for weather data
+                // Select all columns in each row
+                // Ensure there are enough columns for weather data
                 // Declare variables to hold extracted data
 
                 // get first index of row
@@ -61,6 +63,7 @@ public class Webscrapper {
                 String visibility = Webscrapper.bruh(12,iterator,rows);
 
 
+                // Create a WeatherEntity object and add it to the list //we make it with builder instead of constructor
                 WeatherEntity weatherEntity = WeatherEntity.builder()
                         .time(time)
                         .temperature(temperature)
@@ -85,6 +88,7 @@ public class Webscrapper {
         return null;
     }
 
+    // method to extract data from a specific row and column
     private static String bruh(int index, int iterator, Elements rows) {
         //index chooses which vertical row to use eg. index(0) = time 00:00, 03:00 | index(1) = temperature
         //Iterator
