@@ -56,7 +56,6 @@ public class WeatherDTO {
     }
 
 
-// Constructors, getters, and setters
-
+    // Constructors, getters, and setters
     // You can generate constructors, getters, and setters for the above fields using your IDE.
 }

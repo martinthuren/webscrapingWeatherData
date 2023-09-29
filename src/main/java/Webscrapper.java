@@ -31,14 +31,12 @@ public class Webscrapper {
             for (int iterator = 0; iterator < 8; iterator++) {
 
                 // Select all columns in each row// Ensure there are enough columns for weather data
-                    // Declare variables to hold extracted data
+                // Declare variables to hold extracted data
 
-                    // get first index of row
-                    String time = Webscrapper.bruh(0,iterator,rows);
-
+                // get first index of row
+                String time = Webscrapper.bruh(0,iterator,rows);
 
                 String temperature = Webscrapper.bruh(1,iterator,rows);
-
 
                 String weatherCondition = Webscrapper.bruh(2,iterator,rows);
 
@@ -46,16 +44,21 @@ public class Webscrapper {
 
                 String precipitationAmount = Webscrapper.bruh(4,iterator,rows);
 
-
                 String humidity = Webscrapper.bruh(5,iterator,rows);
-                String windSpeed = Webscrapper.bruh(6,iterator,rows);
-                String windGust = Webscrapper.bruh(7,iterator,rows);
-                String windDirectionDegrees = Webscrapper.bruh(8,iterator,rows);
-                String windDirection = Webscrapper.bruh(9,iterator,rows);
-                String cloudCoverage = Webscrapper.bruh(10,iterator,rows);
-                String uvIndex = Webscrapper.bruh(11,iterator,rows);
-                String visibility = Webscrapper.bruh(12,iterator,rows);
 
+                String windSpeed = Webscrapper.bruh(6,iterator,rows);
+
+                String windGust = Webscrapper.bruh(7,iterator,rows);
+
+                String windDirectionDegrees = Webscrapper.bruh(8,iterator,rows);
+
+                String windDirection = Webscrapper.bruh(9,iterator,rows);
+
+                String cloudCoverage = Webscrapper.bruh(10,iterator,rows);
+
+                String uvIndex = Webscrapper.bruh(11,iterator,rows);
+
+                String visibility = Webscrapper.bruh(12,iterator,rows);
 
 
                 WeatherEntity weatherEntity = WeatherEntity.builder()
@@ -75,7 +78,7 @@ public class Webscrapper {
                 weatherObjects.add(weatherEntity);
                 }
 
-return weatherObjects;
+                return weatherObjects;
         }catch (Exception e) {
             e.printStackTrace();
         }

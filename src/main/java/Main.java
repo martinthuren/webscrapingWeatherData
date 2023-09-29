@@ -11,18 +11,10 @@ public class Main {
 
        ArrayList<WeatherEntity> list =  Webscrapper.getDTOData();
 
-
        list.forEach(weatherEntity -> {
            WeatherDAO.save(weatherEntity);
        });
 
 
-
-
-
-
     }
-
-
-
 }

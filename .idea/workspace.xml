@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd474c7-80a8-4d30-a583-049756b66749" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/25f94770-4644-4c2a-97b0-78f2166a7b27.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WeatherDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Webscrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Webscrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HibernateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HibernateConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeatherEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeatherEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Webscrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Webscrapper.class" afterDir="false" />
-    </list>
-    <list id="3ce2d1cc-8ec3-4c4e-88d1-e9eb29869a49" name="Changes by yusef" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HibernateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WeatherEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WeatherEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Webscrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Webscrapper.java" afterDir="false" />
     </list>
+    <list id="3ce2d1cc-8ec3-4c4e-88d1-e9eb29869a49" name="Changes by yusef" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,35 +27,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/HibernateConfig.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/WebScrape.java" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/WeatherEntity.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="6" changelist="3ce2d1cc-8ec3-4c4e-88d1-e9eb29869a49" />
-        <range start1="5" end1="5" start2="10" end2="14" changelist="3ce2d1cc-8ec3-4c4e-88d1-e9eb29869a49" />
-        <range start1="11" end1="54" start2="20" end2="33" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="55" end1="58" start2="34" end2="34" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="59" end1="62" start2="35" end2="35" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="63" end1="66" start2="36" end2="36" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="67" end1="84" start2="37" end2="51" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="85" end1="85" start2="52" end2="56" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Webscrapper.java">
-      <ranges>
-        <range start1="10" end1="11" start2="10" end2="11" changelist="3ce2d1cc-8ec3-4c4e-88d1-e9eb29869a49" />
-        <range start1="20" end1="24" start2="20" end2="20" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="28" end1="28" start2="24" end2="25" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="29" end1="30" start2="26" end2="27" changelist="3ce2d1cc-8ec3-4c4e-88d1-e9eb29869a49" />
-        <range start1="31" end1="49" start2="28" end2="34" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="50" end1="50" start2="35" end2="38" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="51" end1="51" start2="39" end2="74" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="53" end1="95" start2="76" end2="79" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="97" end1="99" start2="81" end2="82" changelist="9bd474c7-80a8-4d30-a583-049756b66749" />
-        <range start1="100" end1="100" start2="83" end2="91" changelist="3ce2d1cc-8ec3-4c4e-88d1-e9eb29869a49" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,30 +41,30 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Dag-1-Ph",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dag-1-Ph&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -122,6 +79,7 @@
       <workItem from="1695635478745" duration="3615000" />
       <workItem from="1695641087557" duration="4683000" />
       <workItem from="1695799665614" duration="1110000" />
+      <workItem from="1695973349740" duration="366000" />
     </task>
     <servers />
   </component>
